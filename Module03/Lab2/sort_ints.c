@@ -41,16 +41,22 @@ void printArr(int arr[], int len)
 {
     for (int i = 0; i < len; i++) 
     {
-        printf("%d\n", arr[i]);
+        printf("%d ", arr[i]);
     }
 }
 
 int main() {
-    int arr[] = {5, 6, 4, 10, 3, 2, 1, 7, 8, 9};
+    int arr[10];
+
+    printf("Please enter 10 integer values each separated by a space: \n");
+
+    scanf("%d %d %d %d %d %d %d %d %d %d", &arr[0], &arr[1], &arr[2], &arr[3], &arr[4], &arr[5], &arr[6], &arr[7], &arr[8], &arr[9]);
 
     int len = sizeof(arr) / sizeof(arr[0]);
 
     sort(arr, 0, len - 1);
+
+    printf("The list after sorting: \n");
 
     printArr(arr, len);
 
