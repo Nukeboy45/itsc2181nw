@@ -31,6 +31,8 @@ int main() {
     newBox1.x, newBox1.y, newBox1.z = 2.00, 5.0, 10.0;
     
     struct box greaterBox = compareVolume(newBox1, newBox2);
+    greaterBox.color = "green";
+    greaterBox.x, greaterBox.y, greaterBox.z = 0.0, 0.0, 0.0;
     printf("Item: %d, Color: %s, Position: (%f, %f, %f)\n"
         "Height: %d, Width: %d, Depth: %d", greaterBox.itemnum,
         greaterBox.color, greaterBox.x, greaterBox.y, greaterBox.z, greaterBox.height,
@@ -46,7 +48,10 @@ struct box compareVolume(struct box box1, struct box box2)
     if (box1Volume > box2Volume) 
     {
         return box1;
+    } else if (box2Volume > box1Volume) {
+        return box2;
     } else {
+        // If boxes are equal, return the second box
         return box2;
     }
 }
