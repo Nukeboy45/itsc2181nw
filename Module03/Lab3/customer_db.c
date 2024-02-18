@@ -5,6 +5,9 @@
 #define MAX_LENGTH 20
 #define FIELD_LENGTH 20
 
+// Written by Nathan Weisskopf - ITSC 2181
+// Class of 2024
+
 struct customer {
     char firstName[FIELD_LENGTH];
     char middleName[FIELD_LENGTH];
@@ -14,7 +17,7 @@ struct customer {
 };
 
 void printCustomerArr(struct customer customerArr[], int len) {
-    printf("\n\nCUstomer List:\n--------------------------------\n");
+    printf("\n\nCustomer List:\n--------------------------------\n");
     for (int i=0; i < len; i++) {
         printf("Customer: %s %s %s\nPhone Number: %s, Balance: $%.2f\n\n--------------------------------\n", customerArr[i].firstName, customerArr[i].middleName, customerArr[i].lastName, customerArr[i].phoneNum, customerArr[i].balance);
     }
